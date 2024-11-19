@@ -2,8 +2,8 @@ describe("Покемоны", function () {
   it("Покупка нового аватара", function () {
     cy.visit("https://pokemonbattle.ru/login");
     cy.wait(5000);
-    cy.get(":nth-child(1) > .auth__input").type("anpogodina2001@yandex.ru");
-    cy.get("#password").type("28032001W");
+    cy.get(":nth-child(1) > .auth__input").type("USER_LOGIN");
+    cy.get("#password").type("USER_PASSWORD");
     cy.get(".auth__button").click(); // авторизовались
     cy.get(".header__container > .header__id").click();
     cy.get('[href="/shop"]').click(); // перешли в магазин
